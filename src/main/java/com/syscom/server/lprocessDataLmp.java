@@ -9,7 +9,7 @@ import org.apache.thrift.TException;
  */
 public class lprocessDataLmp  implements lprocessData.Iface{
 
-
+// 实现接口 ，自定义逻辑
     @Override
     public String processData(String para) throws TException {
 

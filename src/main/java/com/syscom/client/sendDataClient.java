@@ -11,8 +11,8 @@ import org.apache.thrift.transport.TSocket;
  */
 public class sendDataClient {
 
-    private static int SERVER_PORT = 7000;
-    private static String SERVER_IP = "192.168.9.62" ;
+    private static int SERVER_PORT = 8899;
+    private static String SERVER_IP = "localhost" ;
 
     /**
      *
