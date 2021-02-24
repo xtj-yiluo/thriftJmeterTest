@@ -16,11 +16,13 @@ public class JmeterSendThrift extends AbstractJavaSamplerClient {
 
 	private int count1 = 0;
 	private int count2 = 0;
-//	private int timestep = 0 ; 
+//	private int timestep = 0 ;
+    @Override
 	public void setupTest(JavaSamplerContext jsc) {
 		results = new SampleResult();
 	}
 
+	@Override
 	public Arguments getDefaultParameters() {
 		Arguments params = new Arguments();
 
@@ -33,6 +35,7 @@ public class JmeterSendThrift extends AbstractJavaSamplerClient {
 		return params;
 	}
 
+	@Override
 	public SampleResult runTest(JavaSamplerContext arg0) {
 		// boolean flag = false;
 		String msg = arg0.getParameter("msg");
@@ -100,11 +103,13 @@ public class JmeterSendThrift extends AbstractJavaSamplerClient {
 		return results;
 	}
 
+	@Override
 	public void teardownTest(JavaSamplerContext arg0) {
 		System.out.println(count1);
 		System.out.println(count2);
 		//producer.close();
 	}
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
